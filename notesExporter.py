@@ -1,5 +1,5 @@
 
-#code developed by kuzan
+#code developed by jamigov
 #email: jamigovfecrd@gmail.com
 
 import pandas as pd
