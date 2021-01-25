@@ -1,8 +1,10 @@
-#code developed by jamigov
+
+#code developed by kuzan
 #email: jamigovfecrd@gmail.com
 
-
 import pandas as pd
+
+fileName = 'example.txt'
 
 #inserting manually the strings from de .txt document
 videoName = '<div class="video-title" aria-label="Item Name">'
@@ -10,21 +12,17 @@ videoDuration = '<div class="video-details" aria-label="Duration">'
 videoTranscript = '<div class="video-section-text" aria-label="Transcript">'
 videoUserNote = '<div class="video-note-text-box video-note-text" aria-label="User Note">'
 
-file = open('./notes container/Applied Machine Learning in Python - Notes | Coursera.txt')
-
+file = open('./notes container/' + fileName)
 fileStr = file.read()
 
 #removing the '\n' from the file
 fileStr = fileStr.replace('\n', '')
-
 
 posSt = 0           #initial position of the found string
 posEnd = 0          #final position of the found string
 lastPosition = 0    #last position where a string was found
 entries = []        #list that carries the notes
 number = -1         #number of the video
-
-
 
 while(True):
 
@@ -58,7 +56,6 @@ while(True):
     posNextNote = fileStr.find(videoName,lastPosition)          #if it doesn't exist then you just put '-1'
                                                                 #there is a special case because with the current logic if the last element has a User Note
                                                                 #I wasn't adding it, so I added this particular case
-
     if((posUserNote < posNextNote) and (posUserNote!=-1)):
         posSt = posUserNote+len(videoUserNote)
         posEnd = fileStr.find('<',posSt)
@@ -94,4 +91,4 @@ while(True):
 
 df = pd.DataFrame.from_dict(entries)            #export the data to a excel file to better read it
 df.to_excel('output.xlsx')
-
+print("Exported sucessfully, check the output.xlsx file")
