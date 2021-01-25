@@ -12,7 +12,7 @@ https://www.coursera.org/learn/name-of-the-course/home/notes.
 5. Copy the .txt file name, typically is : ***Name Of The Course.txt*** and paste it inside the variable ***filename*** inside the notesExporter.py file.
 Currently the variable has the name ***example.txt***.
 ```Python
-#code developed by kuzan
+#code developed by jamigov
 #email: jamigovfecrd@gmail.com
 
 import pandas as pd
