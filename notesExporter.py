@@ -7,10 +7,10 @@ import pandas as pd
 fileName = 'example.txt'
 
 #inserting manually the strings from de .txt document
-videoName = '<div class="video-title" aria-label="Item Name">'
-videoDuration = '<div class="video-details" aria-label="Duration">'
-videoTranscript = '<div class="video-section-text" aria-label="Transcript">'
-videoUserNote = '<div class="video-note-text-box video-note-text" aria-label="User Note">'
+videoName = 'rel="noopener noreferrer" data-track="true" data-track-app="open_course_home" data-track-page="notes_review" data-track-action="[object Object]" data-track-component="highlight_link">'
+videoDuration = '<p class="cds-1 css-7ab86e cds-3" aria-label="Duration" dir="ltr">'
+videoTranscript = '<p class="cds-1 css-v4ktz5 cds-3" data-e2e="video-section-text">'
+videoUserNote = '<p class="cds-1 css-v4ktz5 cds-3" data-e2e="video-note-text">'
 
 file = open('./notes container/' + fileName)
 fileStr = file.read()
